@@ -22,46 +22,40 @@
   </head>
 
   <body>
-    
     <div class="container">
-        <div class="user-container">
-          <script id="user-data" type="text/x-handlebars-template">
-          <img src="{{picture}}" id="profile-pic"/>
-          <div style="color:#ecf0f1">{{firstName}} {{lastName}}</div>
-          <div style="color:#ecf0f1">{{city}},{{state}}</div>
-          </script>
-        </div>
-      </script>
-      <div class="quote-container">
-        <script id="quote-data" type="text/x-handlebars-template">
-        <p>Favorite quote: </p>
-        <div>{{quote}}</div>
-        </script>
-      </div>
+      <div class="user-container"></div>
+      <div class="quote-container"></div>
       <div class="content-container">
-        <div class="pokemon-container">
-        <script id="pokemon-data" type="text/x-handlebars-template">
-        <img src="{{pokemonImg}}"/><p>Favorite Pokemon: {{pokemonName}}</p>
-        </script>
-        </div>
-        <div class="meat-container">
-        <script id="about-data" type="text/x-handlebars-template">
-        <div>About me</div>
-        {{about}}
-        </script>
-        </div>
+        <div class="pokemon-container"></div>
+        <div class="meat-container"></div>
       </div>
       <div class="friends">
-        <h4>Friends</h4><br>
-        <div class="friends-container">
-        <script id="friends-data" type="text/x-handlebars-template">
-        {{#each friends}}
-        <div>{{firstName}} {{lastName}}</div>
-        <br>
-        {{/each}}
-        </script>
-        </div>
+        <h4>Friends</h4>
+        <br />
+        <div class="friends-container"></div>
       </div>
+      <script id="user-data" type="text/x-handlebars-template">
+        <img src="{{picture}}" id="profile-pic" />
+        <div style="color:#ecf0f1">{{firstName}} {{lastName}}</div>
+        <div style="color:#ecf0f1">{{city}},{{state}}</div>
+      </script>
+      <script id="quote-data" type="text/x-handlebars-template">
+        <p>Favorite quote: </p>
+        <div>{{quote}}</div>
+      </script>
+      <script id="pokemon-data" type="text/x-handlebars-template">
+        <img src="{{pokemonImg}}" /><p>Favorite Pokemon: {{pokemonName}}</p>
+      </script>
+      <script id="about-data" type="text/x-handlebars-template">
+        <div>About me</div>
+        {{about}}
+      </script>
+      <script id="friends-data" type="text/x-handlebars-template">
+        {{#each friends}}
+          <div>{{firstName}} {{lastName}}</div>
+          <br />
+        {{/each}}
+      </script>
       <div class="buttons">
         <button onclick="display()">Display User</button>
       </div>

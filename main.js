@@ -1,6 +1,11 @@
 const apiManager = new APIManager();
-apiManager.loadData();
 
 function display() {
-  window.location.reload();
+  $(".user-container").empty();
+  $(".quote-container").empty();
+  $(".meat-container").empty();
+  $(".friends-container").empty();
+  $(".pokemon-container").empty();
+
+  apiManager.loadData();
 }

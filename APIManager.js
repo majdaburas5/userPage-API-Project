@@ -18,6 +18,7 @@ class APIManager {
       this.data["state"] = state;
       this.data["picture"] = picture;
 
+      console.log(this.data);
       this.renders.renderUser(firstName, lastName, city, state, picture);
 
       return $.get(`https://api.kanye.rest/`).then((quoteRes) => {
