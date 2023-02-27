@@ -7,6 +7,7 @@ class Renderer {
     const newHTML = template(userData);
     $(".user-container").append(newHTML);
   }
+
   renderFriends(friends) {
     let friendData = { friends };
 
