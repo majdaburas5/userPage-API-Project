@@ -42,10 +42,9 @@ class APIManager {
         ).then((aboutMe) => {
           const about = aboutMe;
           this.data["about"] = about;
-
           this.renders.renderAboutMe(about);
-
           let randomId = Math.floor(Math.random() * 949);
+
           return $.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`).then(
             (pokemonRes) => {
               let pokemonName = pokemonRes.name;
